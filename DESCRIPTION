@@ -15,3 +15,4 @@ Depends:
 Description: Useful tools for risk-reward oriented risk and trading people
 License: GPL (>= 3)
 Roxygen: list(wrap = FALSE)
+BugReports: Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>

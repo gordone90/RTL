@@ -7,11 +7,17 @@ Author: Philippe Cote and Nima Safaian
 Maintainer: Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
 Depends:
     R (>= 3.0.2),
-    xts,
-    quantmod,
+    ccgarch,
     fGarch,
     fExoticOptions,
-    PerformanceAnalytics
+    PerformanceAnalytics,
+    quantmod,
+    RColorBrewer,
+    RCurl,
+    reshape2,
+    rgl,
+    RJSONIO,
+    xts
 Description: Useful tools for risk-reward oriented risk and trading people
 License: GPL (>= 3)
 Roxygen: list(wrap = FALSE)

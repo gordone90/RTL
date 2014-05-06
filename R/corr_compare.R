@@ -36,7 +36,7 @@ corr_compare <- function(ret,n=20) {
   B = diag(c(f1[3], f2[3])) 
   dccpara = c(0.2,0.6) 
   # estimate the model
-  dccresults = dcc.estimation(inia=a, iniA=A, iniB=B, ini.dcc=dccpara,dvar=ret, model="diagonal")
+  dccresults = dcc.estimation(inia=a, iniA=A, iniB=B, ini.dcc=dccpara,dvar=ret, model="diagonal",message=0)
   # Parameter estimates and their robust standard errors dcc.results$out
   DCCrho = dccresults$DCC[,2]
   

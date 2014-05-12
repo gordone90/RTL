@@ -9,6 +9,7 @@ Imports:
     blotter,
     ccgarch,
     fGarch,
+    fOptions,
     fExoticOptions,
     FinancialInstrument,
     gridExtra,

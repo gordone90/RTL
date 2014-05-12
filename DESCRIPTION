@@ -23,8 +23,6 @@ Imports:
     tcltk,
     timeDate,
     TTR
-Depends:
-    R (>= 2.14.0)
 Description: Generic Risk and Trading Analytics Tools Library
 License: GPL (>= 3)
 Roxygen: list(wrap = FALSE)

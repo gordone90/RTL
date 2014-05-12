@@ -5,7 +5,7 @@ Version: 1.0
 Date: 2014-05-03
 Author: Philippe Cote and Nima Safaian
 Maintainer: Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
-Imports:
+Depends:
     blotter,
     ccgarch,
     fGarch,

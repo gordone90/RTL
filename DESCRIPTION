@@ -5,13 +5,13 @@ Version: 1.0
 Date: 2014-05-03
 Author: Philippe Cote and Nima Safaian
 Maintainer: Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
-Depends:
-    R (>= 3.0.2),
+Imports:
     blotter,
     ccgarch,
     fGarch,
     fExoticOptions,
     FinancialInstrument,
+    gridExtra,
     PerformanceAnalytics,
     quantmod,
     quantstrat,
@@ -20,7 +20,11 @@ Depends:
     reshape2,
     rgl,
     RJSONIO,
-    xts
+    tcltk,
+    timeDate,
+    TTR
+Depends:
+    R (>= 2.14.0)
 Description: Generic Risk and Trading Analytics Tools Library
 License: GPL (>= 3)
 Roxygen: list(wrap = FALSE)

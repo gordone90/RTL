@@ -1,4 +1,10 @@
-aveOFave <- function (x, n = c(3,5,10), ...) 
+#' \code{aveOFave} 
+#' @description returns the average of a series of averages specified in vector n.
+#' @param x xts 
+#' @param n vector
+#' @return a xts object
+#' @export aveOFave
+aveOFave <- function (x, n = c(3,5,10)) 
 {
   numberofave <- length(n)
   x$aveOFave <- 0

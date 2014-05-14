@@ -21,6 +21,6 @@ data(data)
 RTL:::aveOFave(x=Cl(CL1),n=c(3,5,10))
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com>, Nima Safaian <nima.safaian@gmail.com>
 }
 

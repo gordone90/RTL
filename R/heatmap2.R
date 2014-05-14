@@ -2,7 +2,7 @@ heatmap2 <- function(data,x,y,z,title="",set.range=F,ShowminORmax="max",mypanel=
 #set.range=T if you want the scale to be -x,+x or False uses actual min and actual max
 #ShowminORmax= "min" to output min values in the title, "max" to show max values
 #mypanel=T to show values in the cells or F just to show color
-  library(RColorBrewer)
+  #library(RColorBrewer)
   colorrange=colorRampPalette(brewer.pal(11, "Spectral"))
   myPanel <- function(x, y, z, ...) {panel.levelplot(x,y,z,...); panel.text(x, y, round(z,1))}
 

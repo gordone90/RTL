@@ -24,7 +24,7 @@ corr_compare <- function(ret,n=20) {
   #OOrho = ccor(res)
   
   ######### DCC ######
-  library(ccgarch)
+  #library(ccgarch)
   # estimate univatiate GARCH models to get starting values
   f1 = garchFit(~ garch(1,1), data = ret[,1],include.mean=FALSE)
   f1 = f1@fit$coef

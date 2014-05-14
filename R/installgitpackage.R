@@ -9,10 +9,9 @@
 #' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
 #' @examples 
 #' RTL:::installgitpackage(proxy=FALSE,proxyhttp=NULL,packagename="rCharts",gitrepo="ramnathv")
-
 installgitpackage <- function(proxy=TRUE,proxyhttp=NULL,packagename="RTL",gitrepo="risktoollib") {
   local({r <- getOption("repos")
-  r["CRAN"] <- "http://cran.r-project.org"; options(repos=r)})
+         r["CRAN"] <- "http://cran.r-project.org"; options(repos=r)})
   install.packages(c("httr","devtools"),type='source')
   require("devtools")
   require("httr")

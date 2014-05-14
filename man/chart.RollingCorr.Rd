@@ -12,12 +12,32 @@ chart.RollingCorr(Ra, Rb, width = 12, xaxis = TRUE, legend.loc = NULL,
 \item{Rb}{A univariate or multivariate xts object of returns.}
 
 \item{width}{Number of periods to compute correlation over.}
+
+\item{legend.loc}{places a legend into one of nine locations on the chart: bottomright, bottom, bottomleft, left, topleft, top, topright, right, or center.}
+
+\item{xaxis}{If true, draws the x axis}
+
+\item{colorset}{Color palette to use, set by default to rational choices}
+
+\item{...}{any other passthru parameters}
+
+\item{ylimmin}{ylim minimum value}
+
+\item{ylimmax}{ylim maximum value}
+
+\item{fill}{a three-component vector or list (recycled otherwise) providing filling values at the left/within/to the right of the data range. See the fill argument of na.fill for details.}
 }
 \value{
 A univariate xts object representing the average of averages.
 }
 \description{
-Charts Rolling Correlation
+chart.RollingCorrelation from PerformanceAnalytics using Spearman method and customized ylim
+}
+\examples{
+data(data)
+Ra<-RTL:::data_ret(x=Cl(CL1),returntype=c("relative"))
+Rb<-RTL:::data_ret(x=(CL2),returntype=c("relative"))
+chart.RollingCorr<-function (Ra=Ra, Rb=Rb, width = 12, xaxis = TRUE, legend.loc = NULL,colorset = (1:12), ylimmin=-1,ylimmax=1,..., fill = NA)
 }
 \author{
 Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>

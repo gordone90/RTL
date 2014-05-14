@@ -1,6 +1,6 @@
 #EIAScrape("PET.MCRFPUS1.M",api_key)
 EIAScrape<-function(seriesid,api_key="83307AB94D4FC78A247EF9E5FAE67581") {
-  library(RJSONIO)
+  #library(RJSONIO)
   series_id<-seriesid
   query<-paste("http://api.eia.gov/series?api_key=",api_key,"&","series_id=",series_id,"&out=json",sep="")
   yy<-fromJSON(query)

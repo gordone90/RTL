@@ -1,11 +1,23 @@
 #' \code{chart.RollingCorr} 
-#' @description Charts Rolling Correlation
+#' @description chart.RollingCorrelation from PerformanceAnalytics using Spearman method and customized ylim
 #' @param Ra A univariate xts object of returns.
 #' @param Rb A univariate or multivariate xts object of returns.
 #' @param width Number of periods to compute correlation over. 
+#' @param legend.loc places a legend into one of nine locations on the chart: bottomright, bottom, bottomleft, left, topleft, top, topright, right, or center.
+#' @param xaxis If true, draws the x axis
+#' @param colorset Color palette to use, set by default to rational choices
+#' @param ... any other passthru parameters
+#' @param ylimmin ylim minimum value
+#' @param ylimmax ylim maximum value
+#' @param fill a three-component vector or list (recycled otherwise) providing filling values at the left/within/to the right of the data range. See the fill argument of na.fill for details.
 #' @return A univariate xts object representing the average of averages. 
 #' @export chart.RollingCorr
 #' @author Philippe Cote <coteph@@mac.com>, Nima Safain <nima.safaian@@gmail.com>
+#' @examples
+#' data(data)
+#' Ra<-RTL:::data_ret(x=Cl(CL1),returntype=c("relative"))
+#' Rb<-RTL:::data_ret(x=(CL2),returntype=c("relative"))
+#' chart.RollingCorr<-function (Ra=Ra, Rb=Rb, width = 12, xaxis = TRUE, legend.loc = NULL,colorset = (1:12), ylimmin=-1,ylimmax=1,..., fill = NA)
 
 chart.RollingCorr<-function (Ra, Rb, width = 12, xaxis = TRUE, legend.loc = NULL,colorset = (1:12), ylimmin=-1,ylimmax=1,..., fill = NA) 
 {

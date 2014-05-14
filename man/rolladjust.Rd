@@ -9,13 +9,13 @@ rolladjust(x, datatype = c("returns"), commodityname = c("cmewti"),
 \arguments{
 \item{x}{An xts object of prices or returns.}
 
-\item{data_type}{Type of xts input object: "prices" or "returns".}
+\item{datatype}{Type of xts input object: "prices" or "returns".}
 
 \item{commodityname}{Name of commodity in expiry_table. See example below for values.}
 
 \item{rolltype}{Type of contract roll: "Last.Trade" or "First.Notice".}
 
-\item{second}{contract Object name of to adjust roll price with if datatype = "prices".}
+\item{secondcontract}{Object name of to adjust roll price with if datatype = "prices".}
 
 \item{option}{TRUE if you also want to remove option roll returns. Default is FALSE.}
 }

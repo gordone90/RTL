@@ -15,5 +15,5 @@ data_ret <- function (x,returntype=c("absolute")) {
   data_ret_abs <- (x-lag(x,lag=1,arithmetic=FALSE)) ; data_ret_abs <- na.omit(data_ret_abs)
   data_ret_rel <- (x/lag(x,lag=1,arithmetic=FALSE))-1 ; data_ret_rel <- na.omit(data_ret_rel)
   if (returntype=="absolute") {return(data_ret_abs)}
-  if (returntype=="relative") {return(data_ret_abs)}
+  if (returntype=="relative") {return(data_ret_rel)}
 }

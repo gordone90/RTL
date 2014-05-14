@@ -1,3 +1,12 @@
+#' \code{chart.RollingCorr} 
+#' @description Charts Rolling Correlation
+#' @param Ra A univariate xts object of returns.
+#' @param Rb A univariate or multivariate xts object of returns.
+#' @param width Number of periods to compute correlation over. 
+#' @return A univariate xts object representing the average of averages. 
+#' @export chart.RollingCorr
+#' @author Philippe Cote <coteph@@mac.com>, Nima Safain <nima.safaian@@gmail.com>
+
 chart.RollingCorr<-function (Ra, Rb, width = 12, xaxis = TRUE, legend.loc = NULL,colorset = (1:12), ylimmin=-1,ylimmax=1,..., fill = NA) 
 {
   Ra = checkData(Ra)

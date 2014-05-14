@@ -1,10 +1,10 @@
 #' \code{rolladjust} 
 #' @description Returns a xts price or return object adjusted for contract roll. The methodology used to adjust returns is to remove the daily returns on the day after expiry and for prices to adjust historical rolling front month contracts by the size of the roll at each expiry. This is conducive to quantitative trading strategies as it reflects the PL of a financial trader. 
 #' @param x An xts object of prices or returns.
-#' @param data_type Type of xts input object: "prices" or "returns".
+#' @param datatype Type of xts input object: "prices" or "returns".
 #' @param commodityname Name of commodity in expiry_table. See example below for values.
 #' @param rolltype Type of contract roll: "Last.Trade" or "First.Notice".
-#' @param second contract Object name of to adjust roll price with if datatype = "prices".
+#' @param secondcontract Object name of to adjust roll price with if datatype = "prices".
 #' @param option TRUE if you also want to remove option roll returns. Default is FALSE.
 #' @return Roll-adjusted xts object of returns
 #' @export fetchdata

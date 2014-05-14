@@ -7,10 +7,12 @@ Author: Philippe Cote and Nima Safaian
 Maintainer: Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
 Depends:
     ccgarch,
+    devtools,
     fGarch,
     fOptions,
     fExoticOptions,
     gridExtra,
+    httr,
     PerformanceAnalytics,
     quantmod,
     RColorBrewer,

@@ -6,14 +6,21 @@
 aveOFave(x, n = c(3, 5, 10))
 }
 \arguments{
-\item{x}{xts}
+\item{x}{Univariate xts series.}
 
-\item{n}{vector}
+\item{n}{Vector of averaging period to use.}
 }
 \value{
-a xts object
+A univariate xts object representing the average of averages.
 }
 \description{
-returns the average of a series of averages specified in vector n.
+Returns a xts object representing the average of multiple averages.
+}
+\examples{
+data(data)
+RTL:::aveOFave(x=Cl(CL1),n=c(3,5,10))
+}
+\author{
+Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
 }
 

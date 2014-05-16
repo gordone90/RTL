@@ -1,27 +1,31 @@
+#' \code{promptBeta} 
+#' @description Returns a xts object representing the average of multiple averages.
+#' @param comm Commodity prefix for tickers e.g. "NG", "CL". Refer to fetchdata(). 
+#' @param term Suffix of commodity tickers or NULL. Refer to fetchdata().
+#' @param last "all" or numeric period of time in days.
+#' @param betatype "all" "bull" "bear"
+#' @param end_date Start date as character yyy-mm-dd.
+#' @return A list of [1] betas as a dataframe and [2] summary statistics.
+#' @export promptBeta
+#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @examples 
+#' data(data)
+#' RTL:::promptBeta(comm="CL",term=3,period="all",cmdty="cmewti",betatype="all") 
+#' RTL:::promptBeta(comm=c("CL1","CL2","CL3"),term=NULL,period="all",cmdty="cmewti",betatype="all")
 
-PromptBeta<-function(icomm,term=40,period="all",cmdty="cmewti",betatype="all") {
-  # INPUTs
-    # icomm = cmdty prefix in session e.g. "NG", "CL"
-    # last = "all" or last= specify number of days
-    #betatype = "all" "bull" "bear"
-  #OUTPUT
-    # list of [1] betas as adataframe and [2] summary statistics
-  
-  # dependencies
-  func <- c("fetchdata","data_ret","rolladjust")
-  for (f in func) { if (!exists(f)) {stop(print(paste("need to load function",f)))}}
+promptBeta<-function(comm,term=NULL,period="all",cmdty="cmewti",betatype="all") {
 
-term<-seq(1:term)
-data<-na.omit(fetchdata(comm=icomm,term,type="Cl"))
+if(length(term)!=0) {term<-seq(1:term)}
+data<-na.omit(fetchdata(comm=comm,term,type="Cl"))
 
 if (is.numeric(period)) {
   last<-nrow(data);first<-last - period
   data<-data[first:last,]
 } 
 
-if(icomm=="CL") {data['2008-09-22']<-NA ; data<-na.omit(data)}
+if(comm[1]=="CL") {data['2008-09-22']<-NA ; data<-na.omit(data)}
 
-ret<-data_ret(data)[[1]]
+ret<-data_ret(x=data,returntype=c("relative"))
 ret <- na.omit(rolladjust(ret,datatype="returns",commodityname=cmdty,rolltype="Last.Trade"))
 
 all <- CAPM.beta(ret,ret[,1])
@@ -36,10 +40,6 @@ out<-cbind(t(all),t(bull),t(bear))
 out<-data.frame(out);names(out)<-c("all","bull","bear")
 
 betaout<-list(out=out,betaformula=summary(betaformula))
-#
-#   Make it more generic
-#
-
 return(betaout)
 
 }

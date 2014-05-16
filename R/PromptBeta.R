@@ -16,7 +16,7 @@
 promptBeta<-function(comm,term=NULL,period="all",cmdty="cmewti",betatype="all") {
 
 if(length(term)!=0) {term<-seq(1:term)}
-data<-na.omit(fetchdata(comm=comm,term,type="Cl"))
+data<-na.omit(RTL:::fetchdata(comm=comm,term,type="Cl"))
 
 if (is.numeric(period)) {
   last<-nrow(data);first<-last - period
@@ -26,7 +26,7 @@ if (is.numeric(period)) {
 if(comm[1]=="CL") {data['2008-09-22']<-NA ; data<-na.omit(data)}
 
 ret<-data_ret(x=data,returntype=c("relative"))
-ret <- na.omit(rolladjust(ret,datatype="returns",commodityname=cmdty,rolltype="Last.Trade"))
+ret <- na.omit(RTL:::rolladjust(ret,datatype="returns",commodityname=cmdty,rolltype="Last.Trade"))
 
 all <- CAPM.beta(ret,ret[,1])
 bull <- CAPM.beta.bull(ret,ret[,1])
@@ -41,5 +41,4 @@ out<-data.frame(out);names(out)<-c("all","bull","bear")
 
 betaout<-list(out=out,betaformula=summary(betaformula))
 return(betaout)
-
 }

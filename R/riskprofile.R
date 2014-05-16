@@ -17,26 +17,26 @@ x <- na.omit(x)
 VaR <- last(x,n=300)
 risk <- data.frame(as.numeric(apply(VaR, 2, quantile, .01, type=8,na.rm=TRUE)),
                    as.numeric(apply(VaR, 2, quantile, .99, type=8,na.rm=TRUE)))
-names(risk)<-c("at1%","at99%")
+names(risk)<-c("at_1_Percent","at_99_Percent")
 
 # calculate sVaR
 if (nrow(x['2008::2009'])==0) {
   junk <- data.frame(0,0)
-  names(junk)<-c("at1%","at99%")
+  names(junk)<-c("at_1_Percent","at_99_Percent")
   risk <- rbind(risk,junk) ; risk
   
   } else  {
     sVaR <- x['2008::2009']  
     junk <- data.frame(as.numeric(apply(sVaR, 2, quantile, type=8, .01, na.rm=TRUE)),
                      as.numeric(apply(sVaR, 2, quantile, type=8, .99, na.rm=TRUE)))
-    names(junk)<-c("at1%","at99%")
+    names(junk)<-c("at_1_Percent","at_99_Percent")
     risk <- rbind(risk,junk) ; risk
           }
 
 # calculate stress
 stress <- x
 junk <- data.frame(as.numeric(min(stress)),as.numeric(max(stress)))
-names(junk)<-c("at1%","at99%")
+names(junk)<-c("at_1_Percent","at_99_Percent")
 risk <- rbind(risk,junk)
 row.names(risk)<-c("VaR","sVaR","Stress_WorstCases") 
 

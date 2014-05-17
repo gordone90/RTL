@@ -13,7 +13,7 @@
 
 loadQuandl <- function(tickers=subset(tickers,source %in% "quandl"),token="yourtoken",start_date="2003-01-01", end_date=format(Sys.Date(),"%Y-%m-%d")) {
   Quandl.auth(token)
-  for (i in 1:nrow(tickers)) {assign(as.character(tickers[i,2]),Quandl(as.character(tickers[i,1]),type="xts"))} 
+  for (i in 1:nrow(tickers)) {assign(as.character(tickers[i,2]),Quandl(as.character(tickers[i,1]),type="xts",start_date=start_date,end_date=end_date),envir = as.environment(1))} 
   }
 
 

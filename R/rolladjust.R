@@ -50,7 +50,7 @@ rolladjust <- function (x,datatype=c("returns"),commodityname=c("cmewti"),rollty
   if (datatype=="prices") {
     if (is.OHLC(x)) {
       x$dollarroll <- 0
-      x<-merge(x,Cl(secondcontract)) 
+      x<-na.omit(merge(x,Cl(secondcontract))) 
       for (i in 1:nrow(x)) {if(x$expiry[i,]==1){x$dollarroll[i,]<-x$Close[i,]- x$Close.1[i,] }}
       x$cumroll <- 0
       for (i in (nrow(x):1)) {x$cumroll[i,]<- last(cumsum(x$dollarroll[i:nrow(x)]))}

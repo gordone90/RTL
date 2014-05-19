@@ -13,6 +13,7 @@ Depends:
     fExoticOptions,
     gridExtra,
     httr,
+    lattice,
     PerformanceAnalytics,
     Quandl,
     quantmod,

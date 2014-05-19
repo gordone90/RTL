@@ -11,10 +11,7 @@
 #' RTL:::installgitpackage(proxy=FALSE,proxyhttp=NULL,packagename="rCharts",gitrepo="ramnathv")
 installgitpackage <- function(proxy=TRUE,proxyhttp=NULL,packagename="RTL",gitrepo="risktoollib") {
   local({r <- getOption("repos")
-         r["CRAN"] <- "http://cran.r-project.org"; options(repos=r)})
-  install.packages(c("httr","devtools"),type='source')
-  require("devtools")
-  require("httr")
+        r["CRAN"] <- "httpe://cran.r-project.org"; options(repos=r)})
   if (proxy==TRUE) {set_config(use_proxy(url=proxyhttp,port=8080,username=readline("enter network username:"),password=readline("enter password:")))}
   devtools::install_github(packagename,gitrepo)
 }

@@ -9,7 +9,7 @@ loadEIA(tickers = tickers, api_key = "83307AB94D4FC78A247EF9E5FAE67581",
 \arguments{
 \item{tickers}{Dataframe in the same format as the tickers data object in data(data).}
 
-\item{token}{EIA token.}
+\item{api_key}{EIA token.}
 
 \item{start_date}{Start date as character yyy-mm-dd.}
 

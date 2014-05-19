@@ -5,9 +5,12 @@
 #' @param width Number of periods to compute correlation over. 
 #' @param Rf Risk-free rate. Zero by default.
 #' @param attribute Any of "Beta", "Alpha" or "R-Squared".
+#' @param main set the chart title, same as in plot.
+#' @param na.pad TRUE/FALSE If TRUE it adds any times that would not otherwise have been in the result with a value of NA. If FALSE those times are dropped.
 #' @param ... any other passthru parameters.
 #' @return A matrix of results. 
 #' @export RollingRegression
+#' @references Amended version of PerformanceAnalytics package chart.RollingRegression to return data instead of a chart.
 #' @author Philippe Cote <coteph@@mac.com>, Nima Safain <nima.safaian@@gmail.com>
 #' @examples
 #' data(data)
@@ -17,8 +20,6 @@
 
 RollingRegression <- function (Ra, Rb, width = 12, Rf = 0, attribute = c("Beta", "Alpha", "R-Squared"), main = NULL, na.pad = TRUE, ...) 
 {
-  if (!require("quantreg", quietly = TRUE)) 
-    stop("package", sQuote("quantreg"), "is needed.  Stopping")
   Ra = checkData(Ra)
   Rb = checkData(Rb)
   attribute = attribute[1]

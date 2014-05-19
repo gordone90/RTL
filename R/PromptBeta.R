@@ -2,9 +2,9 @@
 #' @description Returns betas of multiple xts prices (by using relative returns).
 #' @param comm Commodity prefix for tickers e.g. "NG", "CL". Refer to fetchdata(). 
 #' @param term Suffix of commodity tickers or NULL. Refer to fetchdata().
-#' @param last "all" or numeric period of time in days.
+#' @param period "all" or numeric period of time in days.
+#' @param cmdty commodity name in expiry_table to remove returns on roll dates.
 #' @param betatype "all" "bull" "bear"
-#' @param end_date Start date as character yyy-mm-dd.
 #' @return A list of [1] betas as a dataframe and [2] summary statistics of exponential fit if using term=1:n.
 #' @export promptBeta
 #' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
@@ -16,7 +16,7 @@
 promptBeta<-function(comm,term=NULL,period="all",cmdty="cmewti",betatype="all") {
 
 if(length(term)!=0) {term<-seq(1:term)}
-data<-na.omit(RTL:::fetchdata(comm=comm,term,type="Cl"))
+data<-na.omit(fetchdata(comm=comm,term,type="Cl"))
 
 if (is.numeric(period)) {
   last<-nrow(data);first<-last - period
@@ -26,7 +26,7 @@ if (is.numeric(period)) {
 if(comm[1]=="CL") {data['2008-09-22']<-NA ; data<-na.omit(data)}
 
 ret<-data_ret(x=data,returntype=c("relative"))
-ret <- na.omit(RTL:::rolladjust(ret,datatype="returns",commodityname=cmdty,rolltype="Last.Trade"))
+ret <- na.omit(rolladjust(ret,datatype="returns",commodityname=cmdty,rolltype="Last.Trade"))
 
 all <- CAPM.beta(ret,ret[,1])
 bull <- CAPM.beta.bull(ret,ret[,1])

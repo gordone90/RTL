@@ -17,13 +17,17 @@ RollingRegression(Ra, Rb, width = 12, Rf = 0, attribute = c("Beta",
 
 \item{attribute}{Any of "Beta", "Alpha" or "R-Squared".}
 
+\item{main}{set the chart title, same as in plot.}
+
+\item{na.pad}{TRUE/FALSE If TRUE it adds any times that would not otherwise have been in the result with a value of NA. If FALSE those times are dropped.}
+
 \item{...}{any other passthru parameters.}
 }
 \value{
 A matrix of results.
 }
 \description{
-chart.RollingCorrelation from PerformanceAnalytics using Spearman method and customized ylim
+Returns an xts object of the rolling regression attribute selected.
 }
 \examples{
 data(data)
@@ -33,5 +37,8 @@ RTL:::RollingRegression(Ra=Ra, Rb=Rb, width = 20,attribute = c("Beta", "Alpha", 
 }
 \author{
 Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
+}
+\references{
+Amended version of PerformanceAnalytics package chart.RollingRegression to return data instead of a chart.
 }
 

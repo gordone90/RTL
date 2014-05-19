@@ -2,6 +2,8 @@
 #' @description Computes annualised Garch(1,1) volatilities using fGarch.
 #' @param x Univariate or multivariate xts price series.
 #' @param ret "rel" for relative returns, "abs" for absolute returns or "flatprice" if no transformation of x is require.
+#' @param roll True if you want adjust the returns for roll.
+#' @param cmdty commodity name in expiry_table object
 #' @return xts series of annualised Garch(1,1) volatilities if using relative returns.
 #' @export garch
 #' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>

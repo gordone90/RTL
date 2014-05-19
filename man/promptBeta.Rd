@@ -11,11 +11,11 @@ promptBeta(comm, term = NULL, period = "all", cmdty = "cmewti",
 
 \item{term}{Suffix of commodity tickers or NULL. Refer to fetchdata().}
 
-\item{last}{"all" or numeric period of time in days.}
+\item{period}{"all" or numeric period of time in days.}
+
+\item{cmdty}{commodity name in expiry_table to remove returns on roll dates.}
 
 \item{betatype}{"all" "bull" "bear"}
-
-\item{end_date}{Start date as character yyy-mm-dd.}
 }
 \value{
 A list of [1] betas as a dataframe and [2] summary statistics of exponential fit if using term=1:n.

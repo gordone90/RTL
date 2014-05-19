@@ -1,7 +1,7 @@
 #' \code{loadEIA} 
 #' @description Returns a xts object representing the average of multiple averages.
 #' @param tickers Dataframe in the same format as the tickers data object in data(data). 
-#' @param token EIA token.
+#' @param api_key EIA token.
 #' @param start_date Start date as character yyy-mm-dd.
 #' @param end_date Start date as character yyy-mm-dd.
 #' @return A univariate xts object for each tickers. 

@@ -9,6 +9,10 @@ garch(x = data, ret = "rel", roll = TRUE, cmdty = "")
 \item{x}{Univariate or multivariate xts price series.}
 
 \item{ret}{"rel" for relative returns, "abs" for absolute returns or "flatprice" if no transformation of x is require.}
+
+\item{roll}{True if you want adjust the returns for roll.}
+
+\item{cmdty}{commodity name in expiry_table object}
 }
 \value{
 xts series of annualised Garch(1,1) volatilities if using relative returns.

@@ -5,7 +5,7 @@ sdev <- function(x=data,ret="rel",roll=TRUE,cmdty="",iwindow) {
   if (ret=="abs") { (x <- x-lag(x,lag=1,arithmetic=FALSE))}
   
   # roll adjust
-  if(roll==TRUE) {x <- rolladjust(tmp=x,datatype=c("returns"),commodityname=cmdty,rolltype=c("Last.Trade"))}
+  if(roll==TRUE) {x <- rolladjust(x,datatype=c("returns"),commodityname=cmdty,rolltype=c("Last.Trade"))}
   
   # volatility computation
   tmp<-rollapply(x,width=iwindow,FUN=sd,by.column=TRUE)

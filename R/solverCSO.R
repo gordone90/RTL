@@ -10,5 +10,4 @@ solverCSO <- function(S1,S2,sigma1,sigma2,X,price,expiry="2014-02-26",date="2014
   
 }
 
-# solverCSO(S1,S2,sigma1,sigma2,X=X,price,expiry="2014-02-26",date="2014-01-01")
 

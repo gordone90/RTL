@@ -5,7 +5,7 @@
 #' @param last "all" or numeric period of time in days.
 #' @param betatype "all" "bull" "bear"
 #' @param end_date Start date as character yyy-mm-dd.
-#' @return A list of [1] betas as a dataframe and [2] summary statistics.
+#' @return A list of [1] betas as a dataframe and [2] summary statistics of exponential fit if using term=1:n.
 #' @export promptBeta
 #' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
 #' @examples 
@@ -34,11 +34,15 @@ bear <- CAPM.beta.bear(ret,ret[,1])
 
 n<-1:nrow(t(all))
 f<-data.frame(Beta=t(all),Prompt=n);names(f)<-c("Beta","Prompt")
-betaformula<-nls(Beta ~ exp(a+b*Prompt),data=f,start=list(a=0,b=0))
+
+betaformula <- "Only applicable when computing term betas and estimating an exponential fit along the term"
+if(length(term)!=0) {
+  betaformula<-summary(nls(Beta ~ exp(a+b*Prompt),data=f,start=list(a=0,b=0)))
+}
 
 out<-cbind(t(all),t(bull),t(bear))
 out<-data.frame(out);names(out)<-c("all","bull","bear")
 
-betaout<-list(out=out,betaformula=summary(betaformula))
+betaout<-list(out=out,betaformula=betaformula)
 return(betaout)
 }

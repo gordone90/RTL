@@ -1,5 +1,5 @@
 #' \code{garch} 
-#' @description Returns a xts object representing the average of multiple averages.
+#' @description Computes annualised Garch(1,1) volatilities using fGarch.
 #' @param x Univariate or multivariate xts price series.
 #' @param ret "rel" for relative returns, "abs" for absolute returns or "flatprice" if no transformation of x is require.
 #' @return xts series of annualised Garch(1,1) volatilities if using relative returns.

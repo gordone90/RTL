@@ -17,6 +17,7 @@ Depends:
     PerformanceAnalytics,
     Quandl,
     quantmod,
+    quantreg,
     RColorBrewer,
     RCurl,
     reshape2,

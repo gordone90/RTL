@@ -11,10 +11,10 @@ garch(x = data, ret = "rel", roll = TRUE, cmdty = "")
 \item{ret}{"rel" for relative returns, "abs" for absolute returns or "flatprice" if no transformation of x is require.}
 }
 \value{
-xts series of Garch(1,1) volatilities.
+xts series of annualised Garch(1,1) volatilities if using relative returns.
 }
 \description{
-Returns a xts object representing the average of multiple averages.
+Computes annualised Garch(1,1) volatilities using fGarch.
 }
 \examples{
 data(data)

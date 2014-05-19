@@ -18,7 +18,7 @@ promptBeta(comm, term = NULL, period = "all", cmdty = "cmewti",
 \item{end_date}{Start date as character yyy-mm-dd.}
 }
 \value{
-A list of [1] betas as a dataframe and [2] summary statistics.
+A list of [1] betas as a dataframe and [2] summary statistics of exponential fit if using term=1:n.
 }
 \description{
 Returns a xts object representing the average of multiple averages.

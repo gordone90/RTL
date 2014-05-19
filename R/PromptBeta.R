@@ -1,5 +1,5 @@
 #' \code{promptBeta} 
-#' @description Returns a xts object representing the average of multiple averages.
+#' @description Returns betas of multiple xts prices (by using relative returns).
 #' @param comm Commodity prefix for tickers e.g. "NG", "CL". Refer to fetchdata(). 
 #' @param term Suffix of commodity tickers or NULL. Refer to fetchdata().
 #' @param last "all" or numeric period of time in days.

@@ -1,28 +1,50 @@
+#' \code{garch} 
+#' @description Returns a xts object representing the average of multiple averages.
+#' @param x Univariate or multivariate xts price series.
+#' @param ret "rel" for relative returns, "abs" for absolute returns or "flatprice" if no transformation of x is require.
+#' @return xts series of annualised Garch(1,1) volatilities. 
+#' @export garch
+#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @examples 
+#' data(data)
+#' RTL:::garch(x=Cl(CL1),ret="rel",roll=TRUE,cmdty="cmewti")
+#' RTL:::garch(x=merge(Cl(CL1),Cl(CL24)),ret="rel",roll=TRUE,cmdty="cmewti")
+
 garch <- function(x=data,ret="rel",roll=TRUE,cmdty="") {
-  # data is univariate
-  # return type
+  
+  varnames <- colnames(x)
+  
   if (ret=="rel") { (x <- log(x/lag(x,lag=1,arithmetic=FALSE)))}
   if (ret=="abs") { (x <- x-lag(x,lag=1,arithmetic=FALSE))}
   if (ret=="flatprice") {x <- x}
   
-  # roll adjust
-  if(roll==TRUE) {x <- rolladjust(tmp=x,datatype=c("returns"),commodityname=cmdty,rolltype=c("Last.Trade"))}
-    
-  # volatility computation
-  fit <- garchFit(~garch(1,1),data=as.xts(na.omit(x)),trace=FALSE)
-  # garchvol = as.matrix(volatility(fit,type="sigma")) 
-  garchvol <- fit@sigma.t
+  if(roll==TRUE) {x <- rolladjust(x=x,datatype=c("returns"),commodityname=cmdty,rolltype=c("Last.Trade"))}
+  x<-na.omit(x)
+  nvar <- length(colnames(x))
+  res <- x[,1] ; res[,1]<-0
   
-  x <- merge(na.omit(x),garchvol)
+  for (i in 1:nvar) {
+    tmp<-x[,i]
+    fit <- garchFit( ~ garch(1,1),data=as.xts(na.omit(tmp)),trace=FALSE)
+    # garchvol = as.matrix(volatility(fit,type="sigma")) 
+    garchvol <- fit@sigma.t
+    res<- merge(na.omit(res),garchvol)
+  }
+
+  x<-res[,-1]
+    
   if(ret=="rel") {
   # Annualized Volatilty
   if (periodicity(x)$scale=="daily") {x$garchvol <- x$garchvol*sqrt(250)}
+  if (periodicity(x)$scale=="weekly") {x$garchvol <- x$garchvol*sqrt(52)}
   if (periodicity(x)$scale=="monthly") {x$garchvol <- x$garchvol*sqrt(12)}
   } else {
   if (periodicity(x)$scale=="daily") {x$garchvol <- x$garchvol}
+  if (periodicity(x)$scale=="weekly") {x$garchvol <- x$garchvol}          
   if (periodicity(x)$scale=="monthly") {x$garchvol <- x$garchvol}          
   }
-  return(x$garchvol)
+  colnames(x) <- colnames(varnames)
+  return(x)
 }
 
 

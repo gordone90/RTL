@@ -11,9 +11,6 @@ Lots of series...
 \description{
 Loads all EIA NG and PET data as a bulk download.
 }
-\examples{
-loadEIAbulk()
-}
 \author{
 Philippe Cote <coteph@mac.com>, Nima Safaian <nima.safaian@gmail.com>
 }

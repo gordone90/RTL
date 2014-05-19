@@ -38,7 +38,7 @@ garch <- function(x=data,ret="rel",roll=TRUE,cmdty="") {
     if (periodicity(x)$scale=="weekly") {x <- x*sqrt(52)}
     if (periodicity(x)$scale=="monthly") {x <- x*sqrt(12)}
   } 
-  colnames(x) <- colnames(varnames)
+  colnames(x) <- varnames
   return(x)
 }
 

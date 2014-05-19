@@ -1,5 +1,5 @@
 #' \code{RollingRegression} 
-#' @description chart.RollingCorrelation from PerformanceAnalytics using Spearman method and customized ylim
+#' @description Returns an xts object of the rolling regression attribute selected.
 #' @param Ra A univariate xts object of returns.
 #' @param Rb A univariate or multivariate xts object of returns.
 #' @param width Number of periods to compute correlation over. 

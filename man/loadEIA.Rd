@@ -26,6 +26,6 @@ data(data)
 RTL:::loadEIA(tickers=subset(tickers,source \%in\% "eia")[10,],api_key="83307AB94D4FC78A247EF9E5FAE67581",start_date="2003-01-01", end_date=format(Sys.Date(),"\%Y-\%m-\%d"))
 }
 \author{
-Nima Safaian <nima.safaian@gmail.com>
+Nima Safain <nima.safaian@gmail.com,nima.safaian@scotiabank.com>
 }
 

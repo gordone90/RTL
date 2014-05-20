@@ -27,6 +27,6 @@ data(data)
 RTL:::loadQuandl(tickers=subset(tickers,source \%in\% "quandl")[10,],token="CQzMpZ5DKPkekYQiXSHM",start_date="2003-01-01", end_date=format(Sys.Date(),"\%Y-\%m-\%d"))
 }
 \author{
-Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>, Nima Safaian <nima.safaian@gmail.com>
+Nima Safain <nima.safaian@gmail.com,nima.safaian@scotiabank.com>, Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

@@ -40,6 +40,6 @@ Rb<-RTL:::data_ret(x=(CL2),returntype=c("relative"))
 chart.RollingCorr<-function (Ra=Ra, Rb=Rb, width = 12, xaxis = TRUE, legend.loc = NULL,colorset = (1:12), ylimmin=-1,ylimmax=1,..., fill = NA)
 }
 \author{
-Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>, Nima Safain <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>, Nima Safain <nima.safaian@gmail.com,nima.safaian@scotiabank.com>
 }
 

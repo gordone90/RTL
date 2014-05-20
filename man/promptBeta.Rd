@@ -29,6 +29,6 @@ RTL:::promptBeta(comm="CL",term=3,period="all",cmdty="cmewti",betatype="all")
 RTL:::promptBeta(comm=c("CL1","CL2","CL3"),term=NULL,period="all",cmdty="cmewti",betatype="all")
 }
 \author{
-Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>, Nima Safaian <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>, NNima Safain <nima.safaian@gmail.com,nima.safaian@scotiabank.com>
 }
 

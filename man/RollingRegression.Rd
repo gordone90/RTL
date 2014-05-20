@@ -36,7 +36,7 @@ Rb<-RTL:::data_ret(x=(CL2),returntype=c("relative"))
 RTL:::RollingRegression(Ra=Ra, Rb=Rb, width = 20,attribute = c("Beta", "Alpha", "R-Squared"))
 }
 \author{
-Nima Safain <nima.safaian@gmail.com>
+Nima Safain <nima.safaian@gmail.com,nima.safaian@scotiabank.com>
 }
 \references{
 Amended version of PerformanceAnalytics package chart.RollingRegression to return data instead of a chart.

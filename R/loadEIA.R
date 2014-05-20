@@ -6,7 +6,7 @@
 #' @param end_date Start date as character yyy-mm-dd.
 #' @return A univariate xts object for each tickers. 
 #' @export loadEIA
-#' @author Nima Safaian <nima.safaian@@gmail.com>
+#' @author Nima Safain <nima.safaian@@gmail.com,nima.safaian@@scotiabank.com>
 #' @examples 
 #' data(data)
 #' RTL:::loadEIA(tickers=subset(tickers,source %in% "eia")[10,],api_key="83307AB94D4FC78A247EF9E5FAE67581",start_date="2003-01-01", end_date=format(Sys.Date(),"%Y-%m-%d"))

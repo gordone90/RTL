@@ -7,7 +7,7 @@
 #' @param betatype "all" "bull" "bear"
 #' @return A list of [1] betas as a dataframe and [2] summary statistics of exponential fit if using term=1:n.
 #' @export promptBeta
-#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>, NNima Safain <nima.safaian@@gmail.com,nima.safaian@@scotiabank.com>
 #' @examples 
 #' data(data)
 #' RTL:::promptBeta(comm="CL",term=3,period="all",cmdty="cmewti",betatype="all") 

@@ -25,6 +25,6 @@ Installs packages from Github
 RTL:::installgitpackage(proxy=FALSE,proxyhttp=NULL,packagename="rCharts",gitrepo="ramnathv")
 }
 \author{
-Nima Safaian <nima.safaian@gmail.com>
+Nima Safain <nima.safaian@gmail.com,nima.safaian@scotiabank.com>
 }
 

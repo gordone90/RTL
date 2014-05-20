@@ -11,7 +11,7 @@
 #' @return A matrix of results. 
 #' @export RollingRegression
 #' @references Amended version of PerformanceAnalytics package chart.RollingRegression to return data instead of a chart.
-#' @author Nima Safain <nima.safaian@@gmail.com>
+#' @author Nima Safain <nima.safaian@@gmail.com,nima.safaian@@scotiabank.com>
 #' @examples
 #' data(data)
 #' Ra<-RTL:::data_ret(x=Cl(CL1),returntype=c("relative"))

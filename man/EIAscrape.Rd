@@ -21,6 +21,6 @@ data(data)
 RTL:::EIAscrape(seriesid="PET.MCRFPUS1.M",api_key="83307AB94D4FC78A247EF9E5FAE67581")
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safaian <nima.safaian@gmail.com>
+Nima Safaian <nima.safaian@gmail.com>
 }
 

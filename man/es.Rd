@@ -22,6 +22,6 @@ ret<-RTL:::data_ret(x=Cl(CL1),returntype=c("relative"))
 RTL:::es(x=ret,ci=.95)
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safaian <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

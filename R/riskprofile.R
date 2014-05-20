@@ -3,7 +3,7 @@
 #' @param x An xts object of returns.
 #' @return A matrix of results
 #' @export riskprofile
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safain <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
 #' @examples 
 #' data(data)
 #' RTL:::riskprofile(x=RTL:::data_ret(x=Cl(CL1),returntype="relative"))

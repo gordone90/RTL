@@ -6,7 +6,7 @@
 #' @param gitrepo Name of Github repository
 #' @return Installs Github package
 #' @export installgitpackage
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @author Nima Safaian <nima.safaian@@gmail.com>
 #' @examples 
 #' RTL:::installgitpackage(proxy=FALSE,proxyhttp=NULL,packagename="rCharts",gitrepo="ramnathv")
 installgitpackage <- function(proxy=TRUE,proxyhttp=NULL,packagename="RTL",gitrepo="risktoollib") {

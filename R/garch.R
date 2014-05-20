@@ -6,7 +6,7 @@
 #' @param cmdty commodity name in expiry_table object
 #' @return xts series of annualised Garch(1,1) volatilities if using relative returns.
 #' @export garch
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>, Nima Safaian <nima.safaian@@gmail.com>
 #' @examples 
 #' data(data)
 #' RTL:::garch(x=Cl(CL1),ret="rel",roll=TRUE,cmdty="cmewti")

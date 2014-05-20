@@ -7,8 +7,8 @@
 #' @param secondcontract Object name of to adjust roll price with if datatype = "prices".
 #' @param option TRUE if you also want to remove option roll returns. Default is FALSE.
 #' @return Roll-adjusted xts object of returns
-#' @export fetchdata
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safain <nima.safaian@@gmail.com>
+#' @export rolladjust
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
 #' @examples 
 #' data(data)
 #' unique(expiry_table$cmdty) # for list of commodity names

@@ -21,6 +21,6 @@ data(data)
 RTL:::varshockedvalues(prices=Cl(CL1),relshocks=RTL:::data_ret(x=Cl(CL1),returntype="relative"))
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

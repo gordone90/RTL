@@ -25,6 +25,6 @@ Installs packages from Github
 RTL:::installgitpackage(proxy=FALSE,proxyhttp=NULL,packagename="rCharts",gitrepo="ramnathv")
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safaian <nima.safaian@gmail.com>
+Nima Safaian <nima.safaian@gmail.com>
 }
 

@@ -12,6 +12,6 @@ Lots of series...
 Loads all EIA NG and PET data as a bulk download.
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safaian <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

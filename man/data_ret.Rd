@@ -21,6 +21,6 @@ data(data)
 RTL:::data_ret(x=CL1,returntype=c("absolute"))
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

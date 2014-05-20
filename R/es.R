@@ -4,7 +4,7 @@
 #' @param ci Confidence interval i.e. .05 or .95
 #' @return A numeric value. 
 #' @export es
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
 #' @examples 
 #' data(data)
 #' ret<-RTL:::data_ret(x=Cl(CL1),returntype=c("relative"))

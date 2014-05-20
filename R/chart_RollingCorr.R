@@ -12,7 +12,7 @@
 #' @param fill a three-component vector or list (recycled otherwise) providing filling values at the left/within/to the right of the data range. See the fill argument of na.fill for details.
 #' @return A univariate xts object representing the average of averages. 
 #' @export chart.RollingCorr
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safain <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>, Nima Safain <nima.safaian@@gmail.com>
 #' @examples
 #' data(data)
 #' Ra<-RTL:::data_ret(x=Cl(CL1),returntype=c("relative"))

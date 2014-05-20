@@ -6,7 +6,7 @@
 #' @param end_date Start date as character yyy-mm-dd.
 #' @return A univariate xts object for each tickers. 
 #' @export loadQuandl
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>, Nima Safaian <nima.safaian@@gmail.com>
 #' @examples 
 #' data(data)
 #' RTL:::loadQuandl(tickers=subset(tickers,source %in% "quandl")[10,],token="CQzMpZ5DKPkekYQiXSHM",start_date="2003-01-01", end_date=format(Sys.Date(),"%Y-%m-%d"))

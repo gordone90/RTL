@@ -24,6 +24,6 @@ RTL:::plotMultiple(numberofcharts=4,chartsByRow=1)
 plot(Cl(CL1));plot(Cl(CL2));plot(Cl(CL3));plot(Cl(CL4))
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safaian <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

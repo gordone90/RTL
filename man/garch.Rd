@@ -26,6 +26,6 @@ RTL:::garch(x=Cl(CL1),ret="rel",roll=TRUE,cmdty="cmewti")
 RTL:::garch(x=merge(Cl(CL1),Cl(CL24)),ret="rel",roll=TRUE,cmdty="cmewti")
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safaian <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>, Nima Safaian <nima.safaian@gmail.com>
 }
 

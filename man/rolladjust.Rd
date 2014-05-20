@@ -35,6 +35,6 @@ RTL:::rolladjust(x=x,datatype=c("returns"),commodityname=c("cmewti"),rolltype=c(
 RTL:::rolladjust(x=Cl(CL1),datatype=c("prices"),commodityname=c("cmewti"),rolltype=c("Last.Trade"),secondcontract=Cl(CL2),option=FALSE)
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

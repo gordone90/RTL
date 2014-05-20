@@ -4,7 +4,7 @@
 #' @param api_key EIA API token.
 #' @return A list of two objects: name as character and data as a data frame.
 #' @export EIAscrape
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @author Nima Safaian <nima.safaian@@gmail.com>
 #' @examples 
 #' data(data)
 #' RTL:::EIAscrape(seriesid="PET.MCRFPUS1.M",api_key="83307AB94D4FC78A247EF9E5FAE67581")

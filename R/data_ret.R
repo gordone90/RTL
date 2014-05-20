@@ -4,7 +4,7 @@
 #' @param returntype Define return type: accepts "absolute" or "relative" as input.
 #' @return A univariate or multivariate xts object.
 #' @export data_ret
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safain <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
 #' @examples 
 #' data(data)
 #' RTL:::data_ret(x=CL1,returntype=c("absolute"))

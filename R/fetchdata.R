@@ -5,7 +5,7 @@
 #' @param type if xts objects are multivariate OHLCV objects, select which OHLCV column to use using quantmod functions (Cl(),Hi(),Lo(),Op(),Vo())
 #' @return A multivariate xts object.
 #' @export fetchdata
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safain <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
 #' @examples 
 #' data(data)
 #' RTL:::fetchdata(comm="CL",term=c(1,2),type=c("Cl"))

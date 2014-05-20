@@ -4,7 +4,7 @@
 #' @param chartsByRow Number of rows you desired in the plot grid.
 #' @return Sets par(mfrow=c(chartsByCol,chartsByRow)) 
 #' @export plotMultiple
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
 #' @examples 
 #' data(data)
 #' RTL:::plotMultiple(numberofcharts=4,chartsByRow=2)

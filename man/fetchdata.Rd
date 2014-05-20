@@ -24,6 +24,6 @@ RTL:::fetchdata(comm="CL",term=c(1,2),type=c("Cl"))
 RTL:::fetchdata(comm=c("CL1","CL2"),term=NULL,type=c("Cl"))
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

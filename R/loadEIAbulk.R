@@ -2,7 +2,7 @@
 #' @description Loads all EIA NG and PET data as a bulk download.
 #' @return Lots of series...
 #' @export loadEIAbulk
-#' @author Philippe Cote <coteph@@mac.com>, Nima Safaian <nima.safaian@@gmail.com>
+#' @author Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
 
 loadEIAbulk <- function() {
   eia <-c("NG","PET")

@@ -20,6 +20,6 @@ RTL:::riskprofile(x=RTL:::data_ret(x=Cl(CL1),returntype="relative"))
 RTL:::riskprofile(x=RTL:::data_ret(x=Cl(CL1),returntype="absolute"))
 }
 \author{
-Philippe Cote <coteph@mac.com>, Nima Safain <nima.safaian@gmail.com>
+Philippe Cote <coteph@mac.com,philippe.cote@scotiabank.com>
 }
 

@@ -43,6 +43,5 @@ chart.RollingCorr<-function (Ra, Rb, width = 12, xaxis = TRUE, legend.loc = NULL
       else Result.calc = merge(Result.calc, column.calc)
     }
   }
-  chart.TimeSeries(Result.calc, xaxis = xaxis, colorset = colorset, 
-                   legend.loc = legend.loc, ylim = c(ylimmin, ylimmax), ...)
+  chart.TimeSeries(Result.calc, xaxis = xaxis, colorset = colorset,legend.loc = legend.loc, ylim = c(ylimmin, ylimmax), ...)
 }

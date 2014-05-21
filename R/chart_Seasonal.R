@@ -6,7 +6,7 @@
 #' @param output "chart" for trellis object or "data" for data frame of values. 
 #' @return A trellis object if output="chart" or a dataframe if output="data".
 #' @export chart_Seasonal
-#' @author Gordon Evens <gordon.evens@@scotiabank.com>,Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
+#' @author Gordon Evens <gordon.evens@@me.com,gordon.evens@@scotiabank.com>,Philippe Cote <coteph@@mac.com,philippe.cote@@scotiabank.com>
 #' @examples
 #' data(data)
 #' x=Cl(CL1) ; colnames(x) <- c("WTI")
